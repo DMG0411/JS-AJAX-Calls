@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+         <!-- font awesome cdn link  -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+
+        <a href="home.html" class="logo">
+            <img src="images/logo2.jpg" alt="">
+        </a>
+    
+        <nav class="navbar">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="help.html">Help</a>
+          <a href="products.html">Products</a>
+          <a href="flowersGrowing.html">Coming Soon</a>
+      </nav>
+    
+        <div class="icons">
+            
+          <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    
+        
+    </header>
+    
+    
+<!-- header section ends -->
+
+
+<section class="register" id="register">
+
+    <div class="container">
+        <div class="centered">
+        <form id="registerForm"> 
+          <h1>Complete the following fields</h1>
+            <h3>Name:</h3>
+            <input type="name" id="nameRegister" name="name" placeholder="Your name">
+            <span class="error" id="nameErrorRegister"></span>
+            <h3>E-mail address:</h3>
+            <input type="email" id="emailRegister" name="email" placeholder="Email address">
+            <span class="error" id="emailErrorRegister"></span>
+            <h3>Password:</h3>
+            <input type="password" id="passwordRegister" name="passwordRegister" placeholder="Password">
+            <span class="error" id="passwordErrorRegister"></span>
+            <h3>Phone number:</h3>
+            <input type="tel" id="phoneNumber" name="phoneNumberRegister" placeholder="Phone number">
+            <span class="error" id="phoneNumberErrorRegister"></span>
+            <h3>City:</h3>
+            <input type="name" id="city" name="cityRegister" placeholder="Where are you living?">
+            <span class="error" id="cityErrorRegister"></span>
+            <h3>What's this account purpose?</h3>
+            <select id="dropDownRegister" name="dropdown">
+              <option value="choose_option">Please choose an option</option>
+              <option value="option1">Grower</option>
+              <option value="option2">Customer</option>
+            </select>
+            <span class="error" id="dropDownErrorRegister"></span>
+            <button class="buttonRegister" type="submit"><span>Register</span></button>
+        </form>
+        </div>
+      </div>
+
+</section>
+
+<!-- custom js file link  -->
+<script src="js/register.js"></script>
+
+</body>
+</html>

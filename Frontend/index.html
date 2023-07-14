@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn</title>
+
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header section starts  -->
+    <header class="header">
+
+        <a href="home.html" class="logo">
+            <img src="images/logo2.jpg" alt="">
+        </a>
+    
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="help.html">Help</a>
+            <a href="products.html">Products</a>
+            <a href="flowersGrowing.html">Coming Soon</a>
+        </nav>
+    
+        <div class="icons">
+            
+          <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    
+        
+    
+    </header>
+    
+<!-- header section ends -->
+
+
+<section class="login" id="loginPage">
+
+    <div class="container">
+        <div class="centered">
+            <form id="loginForm" onsubmit="validateLogin();">
+            <h1>Sign in with your credentials</h1>
+            <h3>E-mail address:</h3>
+            <input type="email" id="emailLogin" name="email" placeholder="email address">
+            <span class="error" id="emailErrorLogin"></span>
+            <h3>Password:</h3>
+            <input type="password" id="passwordLogin" name="password" placeholder="password"><br><br>
+            <span class="error" id="passwordErrorLogin"></span>
+            <button class="buttonLogin" id="submitButton" type="submit"><span>Sign In</span></button>
+            <a href="register.html">
+              <h3>Don't have an account? Register now!</h3>
+            </a>
+        </form>
+        </div>
+      </div>
+
+</section>
+
+<!-- custom js file link  -->
+<script src="js/login.js"></script>
+
+</body>
+</html>

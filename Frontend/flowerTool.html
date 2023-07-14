@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- font awesome cdn link  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Your Flowers</title>
+</head>
+<body>
+  <div class="container" id="blur">
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="images/logo2.jpg" alt="">
+        </a>
+    
+        <nav class="navbar">
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="help.html">Help</a>
+          <a href="products.html">Products</a>
+          <a href="flowersGrowing.html">Coming Soon</a>
+      </nav>
+
+        <div class="icons">
+          <div class="fas fa-heart" id="favorites"></div>
+          <div class="fas fa-shopping-cart" id="cart-btn"></div>
+          <div class="fas fa-solid fa-user" id="login"></div>
+          <div class="fas fa-bars" id="menu-btn"></div>
+
+        <div class="search-form">
+          <input type="search" id="search-box" placeholder="search here...">
+          <label for="search-box" class="fas fa-search"></label>
+        </div>
+
+        <div class="cart-items-container">
+          <div id="totalPrice"></div>
+              <a href="checkOut.html" class="btn">checkout now</a>
+          </div>
+
+      </div>
+      <div class="favorite-items-container"></div>
+    </header>
+
+    <h1 class="content-title">Add a flower</h1>
+    <div class="overlay" id="overlay" style="display: none;"></div>
+    <div class="div-form" id="div-form" style="display: none;">
+      <form id="addFlowerForm" class="form-container" onsubmit="return checkValid();">
+        <label class="form-component">Flower name</label>
+        <select id="name" name="name">
+          <option value="choose_option">Please choose an option</option>
+          <option value="optionZambila">Zambila</option>
+          <option value="optionLalea">Lalea</option>
+          <option value="optionPanseluta">Panseluta</option>
+          <option value="optionBrandusa">Brandusa</option>
+          <option value="optionNarcisa">Narcisa</option>
+          <option value="optionVioleta">Violeta</option>
+          <option value="optionOrdihee">Orhidee</option>
+          <option value="optionAzalee">Azalee</option>
+          <option value="optionCrizantema">Crizantema</option>
+          <option value="optionGhiocel">Ghiocel</option>
+        </select>
+        <span class="error" id="dropDownErrorFlower"></span>
+
+        <label class="form-component">Kind</label>
+        <input id = "kind" type="kind">
+        <span class="error" id="kindError"></span>
+
+        <label class="form-component">Planting date</label>
+        <input id = "date" type="date" max="">
+        <span class="error" id="dateError"></span>
+
+        <button class="status form-component" onclick="return checkValid();" id="add-submitBtn">SUBMIT</button>
+
+      </form>
+
+   
+        <button onclick="closeForm();" class="status form-component" style="background: #8b0000; color: #FFA8A8; box-shadow: rgba(255, 168, 168, .2) 0 -25px 18px -14px inset,rgba(255, 168, 168, .15) 0 1px 2px,rgba(255, 168, 168, .15) 0 2px 4px,rgba(255, 168, 168, .15) 0 4px 8px,rgba(255, 168, 168, .15) 0 8px 16px,rgba(255, 168, 168, .15) 0 16px 32px;" id="cancel-submitBtn">CANCEL</button>
+    </div>
+    <div class="filters" style="display:none;">
+      <input id="searchInput" type="text" placeholder="Search..">
+    </div>
+    <div class="informationWrapper" id="informationWrapper">
+      <div class="card" id="add-card" style="cursor: pointer;" onclick="openForm();">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+          <rect id="Canvas" fill="#ff13dc" opacity="0" width="18" height="18" />
+          <path d="M14.5,8H10V3.5A.5.5,0,0,0,9.5,3h-1a.5.5,0,0,0-.5.5V8H3.5a.5.5,0,0,0-.5.5v1a.5.5,0,0,0,.5.5H8v4.5a.5.5,0,0,0,.5.5h1a.5.5,0,0,0,.5-.5V10h4.5a.5.5,0,0,0,.5-.5v-1A.5.5,0,0,0,14.5,8Z" />
+        </svg>
+      </div>
+    </div>
+
+<template id="card-template">
+  <div class="card">
+    <div>
+      <div class="title">
+        <h2 id="title">Lalele</h2>
+      </div>
+      <hr class="solid">
+    </div>
+      <div class="information">
+        <p>Data: 18.03.2023</p>
+        <p>Soi: Purple Dream</p>
+    </div>
+
+    <div class="status" id="statusBtn"><span id="statusBtnSpan"></span></div>
+   
+
+      <div class="options-button" id="optionsButton" title="Go to flower culture">
+
+
+        <svg xmlns="http://www.w3.org/2000/svg" height="18" viewBox="0 0 18 18" width="18">
+          <rect id="Canvas" fill="#ff13dc" opacity="0" width="18" height="18" /><path d="M3.662,14.0265a6.635,6.635,0,0,1-1.328-3.897,6.7415,6.7415,0,0,1,6.472-6.759,6.6655,6.6655,0,0,1,5.532,10.656.3625.3625,0,0,0,.05.5l.4655.3875a.3665.3665,0,0,0,.51642-.0442l.00758-.0093a8,8,0,1,0-12.7575,0,.3645.3645,0,0,0,.5117.06229l.0108-.00879.466-.388A.362.362,0,0,0,3.662,14.0265Z" />
+          <path d="M10.4195,11.763a1.4545,1.4545,0,1,1-1.73833-1.0997l.00133-.0003c.374-.0835,2.767-3.1,3.073-2.9225C12.092,7.9355,10.328,11.353,10.4195,11.763Z" />
+          <circle cx="3.909" cy="10.0345" r="0.8" />
+          <circle cx="5.3635" cy="6.398" r="0.8" />
+          <circle cx="12.6365" cy="6.398" r="0.7275" />
+          <circle cx="9" cy="4.9435" r="0.7275" />
+          <circle cx="14.091" cy="10.0345" r="0.7275" />
+        </svg>
+
+      </div>
+
+  </div>
+</template>
+</div>
+<div id="popupAddFlower">
+  <h2>Flower added succefully!</h2>
+  <button class="buttonFlowerStatus" id="addFlower" onclick="location.reload()">Done</button>
+</div>
+<script src="js/flower-tool.js"></script>
+
+</body>
+</html>

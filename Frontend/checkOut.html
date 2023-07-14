@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Gardening</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- header section starts  -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="images/logo2.jpg" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="help.html">Help</a>
+        <a href="products.html">Products</a>
+        <!-- <a href="#review">reviews</a> -->
+    </nav>
+
+    <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-solid fa-user" id="login"></div>
+	  <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+
+    
+
+</header>
+
+<!-- header section ends -->
+
+
+<section class="checkOut" id="checkOut">
+
+    <h1 class="heading"> <span>checkOut</span></h1>
+
+    <div class="home">
+          <div class="centered">
+            <h1>Complete the following fields</h1>
+
+		<h3>Country:</h3>
+            <input type="text" id="country" name="country" placeholder="country">
+            <span id="countryError" class="error"></span>
+
+		<h3>City:</h3>
+            <input type="text" id="city" name="city" placeholder="city">
+            <span id="cityError" class="error"></span>
+
+            <h3>Address:</h3>
+            <input type="text" id="address" name="address" placeholder="address">
+            <span id="addressError" class="error"></span>
+
+		<h3>Name:</h3>
+            <input type="text" id="name" name="name" placeholder="name">
+            <span id="nameError" class="error"></span>
+
+            <h3>Card number:</h3>
+            <input type="text" id="card" name="telRegister" placeholder="text">
+            <span id="cardError" class="error"></span>
+
+		<h3>CCV:</h3>
+            <input type="text" id="ccv" name="ccv" placeholder="CCV">
+            <span id="ccvError" class="error"></span>
+
+		<h3>Expiration date:</h3>
+
+		<input type="date" id="start" name="trip-start"
+       value="2023-04-07"
+       min="2023-04-07" max="2050-12-31">
+       <span id="expirationError" class="error"></span>
+
+
+		<br>
+            
+            <div class="btn" id="placeOrder"><span>Place Order</span> </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- custom js file link  -->
+<script src="js/checkOut.js"></script>
+
+</body>
+</html>

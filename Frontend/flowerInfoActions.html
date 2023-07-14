@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/colorthief@2.3.2/dist/color-thief.min.js"></script>
+
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="blur">
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="images/logo2.jpg" alt="">
+        </a>
+    
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="help.html">Help</a>
+            <a href="products.html">Products</a>
+            <a href="flowersGrowing.html">Coming Soon</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-heart" id="favorites"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-solid fa-user" id="login"></div>
+          <div class="fas fa-bars" id="menu-btn"></div>
+
+          <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+          </div>
+
+          <div class="cart-items-container">
+                
+            <div id="totalPrice"></div>
+                <a href="checkOut.html" class="btn">checkout now</a>
+            </div>
+        </div>
+        <div class="favorite-items-container"></div>
+    
+
+    </header>
+
+    <h1 class="content-title" id ="name" style="text-transform: capitalize;"></h1>
+    <div class="control-panel">
+        <div class="toolbar">
+            <button type="button" class="action-button" id ="actions_recommended"></button>
+        </div>
+        <div class="cp-info">
+            <p class="cp-text" id ="humidity">Humidity: </p>
+            <p class="cp-text" id ="temperature">Temperature: </p>
+            <p class="cp-text" id ="kind"></p>
+            <p class="cp-text" id ="date">Planting </p>
+            <p class="cp-text" id ="actions_history">Actions history: </p>
+        </div>
+        <div class="photos">
+            <img id="firstPhase" src="images/firstPhase_lalea.jpg" class="cp-photo" alt="1">
+            <img id="secondPhase" src="images/secondPhase_lalea.jpg" class="cp-photo" alt="">
+            <img id="thirdPhase" src="images/thirdPhase_lalea.jpg" class="cp-photo" alt="">
+            <img id="forthPhase" src="images/forthPhase_lalea.jpg" class="cp-photo" alt="">
+            <img id="finalPhase" src="images/lalea.jpg" class="cp-photo" alt="">
+        </div>
+    </div>
+</div>
+<button id="deleteFlower" class="buttonDeleteAccount" style="position: relative;left:45%" onclick="toggleDelete()">Delete Flower</button>
+
+    <div id="deletePopup">
+        <h2>This flower will be deleted. Are you sure?</h2>
+        <button class="buttonConfirm" id="confirmBtn" onclick="toggleDelete()">Yes</button>
+        <button class="buttonLogOut" id="cancelBtn" onclick="toggleDelete()">No</button>
+    </div>
+
+    <div id="popup">
+        <h2>You will put on sale this flower. Please enter the price</h2>
+        <input type="number" step="0.01" name="price" id="price">
+        <button class="buttonFlowerStatus" id="putOnSale" onclick="toggle()">Put on sale</button>
+    </div>
+
+    <script src="js/flower-actions.js"></script>
+</body>
+</html>
